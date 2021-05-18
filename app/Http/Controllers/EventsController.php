@@ -13,6 +13,10 @@ use DB;
 
 class EventsController extends BaseController
 {
+    public function getWarmUpEvents() {
+        $data = Event::all();
+        return json_encode($data);
+    }
     /*
      Requirements:
     - maximum 2 sql queries
